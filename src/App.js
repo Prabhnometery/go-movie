@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Movies from "./components/Movies";
 
 export default function App() {
   return (
@@ -50,9 +51,6 @@ function Home() {
   return <h2>Home</h2>
 }
 
-function Movies() {
-  return <h2>Movies</h2>
-}
 
 function Admin() {
   return <h2>Manage Catalouge</h2>
