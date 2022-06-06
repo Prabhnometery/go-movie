@@ -1,7 +1,31 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 export default class Movies extends Component {
+  state = {
+    movies: [],
+  };
+
+  // Gets called when the component is rendered
+  componentDidMount() {
+    this.setState({
+      movies: [
+        {id: 1, title: "The Shawshank Redempetion", runtime: 142},
+        {id: 2, title: "The Godfather", runtime: 175},
+        {id: 3, title: "The Dark Knight", runtime: 153}
+      ]
+    })
+  }
+
   render() {
-    return <h2>Choose a Movie</h2>;
+    return (
+      <Fragment>
+        <h2>Choose a Movie</h2>
+        <ul>
+          {this.state.movies.map((movie) => (
+            <li key={movie.id}>{movie.title}</li>
+          ))}
+        </ul>
+      </Fragment>
+    );
   }
 }
