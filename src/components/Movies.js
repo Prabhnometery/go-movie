@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default class Movies extends Component {
   state = {
@@ -22,7 +23,9 @@ export default class Movies extends Component {
         <h2>Choose a Movie</h2>
         <ul>
           {this.state.movies.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
+            <li key={movie.id}>
+              <Link to={`/movies/${movie.id}`}> {movie.title}</Link>
+            </li>
           ))}
         </ul>
       </Fragment>
