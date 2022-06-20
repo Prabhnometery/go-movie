@@ -10,11 +10,11 @@ export default class Movies extends Component {
   componentDidMount() {
     this.setState({
       movies: [
-        {id: 1, title: "The Shawshank Redempetion", runtime: 142},
-        {id: 2, title: "The Godfather", runtime: 175},
-        {id: 3, title: "The Dark Knight", runtime: 153}
-      ]
-    })
+        { id: 1, title: "The Shawshank Redempetion", runtime: 142 },
+        { id: 2, title: "The Godfather", runtime: 175 },
+        { id: 3, title: "The Dark Knight", runtime: 153 },
+      ],
+    });
   }
 
   render() {

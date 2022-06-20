@@ -4,5 +4,4 @@ export default class Home extends Component {
   render() {
     return <h2>Choose a Home</h2>;
   }
-  
 }
